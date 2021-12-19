@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ChatContainer">
+   <children>
+      <BorderPane prefHeight="700.0" prefWidth="1300.0">
+         <top>
+            <AnchorPane focusTraversable="true" prefHeight="50.0" prefWidth="1300.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0); -fx-background-color: white; -fx-border-color: rgbo(0,0,0,0.5); -fx-border-width: 0 0 0.2 0;" BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane prefHeight="50.0" prefWidth="1300.0">
+                     <children>
+                        <AnchorPane prefHeight="50.0" prefWidth="50.0" StackPane.alignment="CENTER_RIGHT">
+                           <children>
+                              <ImageView fitHeight="29.0" fitWidth="32.0" layoutX="1244.0" layoutY="11.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../assets/images/mss_logo.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="profile_image" fitHeight="50.0" fitWidth="50.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <StackPane maxHeight="649.0" maxWidth="260.0" minHeight="649.0" minWidth="260.0" prefHeight="649.0" prefWidth="260.0" BorderPane.alignment="CENTER">
+               <children>
+                  <BorderPane fx:id="side_bar_chat_list" maxHeight="650.0" maxWidth="260.0" minHeight="649.0" minWidth="260.0" prefHeight="650.0" prefWidth="260.0">
+                      
+                  </BorderPane>
+                  <JFXButton fx:id="create_group_id" buttonType="RAISED" onAction="#create_group" prefHeight="53.0" prefWidth="179.0" ripplerFill="#70c3ffb2" style="-fx-background-color: #69c0ff;" text="Create Chat Space" textAlignment="CENTER" textFill="WHITE" StackPane.alignment="BOTTOM_CENTER">
+                     <StackPane.margin>
+                        <Insets bottom="20.0" />
+                     </StackPane.margin>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../assets/images/create_group.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </StackPane>
+         </left>
+         <center>
+            <StackPane fx:id="dialog_parent_stackpane" maxHeight="650.0" maxWidth="1040.0" minHeight="650.0" minWidth="1040.0" prefHeight="650.0" prefWidth="1040.0" style="-fx-background-image: url(&quot;http://localhost:80/messaging_app/uploads/images/chatting_img.jpg&quot;); -fx-background-repeat: stretch; -fx-background-position: center center; -fx-background-size: 1040 650;" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

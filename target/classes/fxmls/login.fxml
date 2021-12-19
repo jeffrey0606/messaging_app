@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Login">
+   <children>
+      <TextField fx:id="user_name" layoutX="75.0" layoutY="253.0" prefHeight="26.0" prefWidth="250.0" promptText="User Name" />
+      <TextField fx:id="password" accessibleRole="PASSWORD_FIELD" layoutX="75.0" layoutY="319.0" prefHeight="26.0" prefWidth="250.0" promptText="Password" />
+      <JFXButton fx:id="login_button_id" layoutX="75.0" layoutY="391.0" onAction="#login_buttton" prefHeight="26.0" prefWidth="250.0" ripplerFill="WHITE" style="-jfx-button-type: FLAT; -fx-background-color: #69c0ff;" text="Login" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text fill="#69c0ff" layoutX="260.0" layoutY="474.0" onMouseClicked="#register" strokeType="OUTSIDE" strokeWidth="0.0" text="Register" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Text>
+      <Text fx:id="error_msg" fill="#ea0808" layoutX="75.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="250.39999999999986">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="69.0" fitWidth="75.0" layoutX="166.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/mss_logo.png" />
+         </image>
+      </ImageView>
+      <ProgressIndicator fx:id="progress_indicator" layoutX="182.0" layoutY="433.0" prefHeight="44.0" prefWidth="36.0" visible="false" />
+   </children>
+</AnchorPane>

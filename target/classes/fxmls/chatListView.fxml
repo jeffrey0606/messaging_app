@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+
+<JFXListView fx:id="list_view_of_chats" editable="true" fixedCellSize="60.0" maxHeight="649.0" maxWidth="270.0" minHeight="649.0" minWidth="270.0" prefHeight="649.0" prefWidth="270.0" style="-fx-background-color: #f0f2f5; -fx-border-style: solid; -fx-border-width: 0.2 0.2 0 0; -fx-border-color: rgbo(0,0,0,0.5);" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.ChatListViewController">
+        <styleClass>
+            <String fx:value="jfx-list-view" />
+            <String fx:value="jfx-list-cell" />
+            <String fx:value="mylistview" />
+        </styleClass>
+        <stylesheets>
+            <URL value="@../styles/login.css" />
+            <URL value="@../styles/scrollbar.css" />
+        </stylesheets>
+   <padding>
+      <Insets bottom="80.0" />
+   </padding>
+    </JFXListView>

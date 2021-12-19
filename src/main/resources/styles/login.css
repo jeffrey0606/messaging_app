@@ -1,0 +1,30 @@
+/*.jfx-list-cell:selected {
+   -fx-background-color: rgb(105,192,255);
+}
+
+.jfx-list-cell {
+    -fx-background-insets: 0.0;
+}
+
+.jfx-list-cell .jfx-rippler {
+    -fx-rippler-fill: rgbo(105,192,255, 0.3);
+}
+
+.jfx-list-cell:hover {
+    -fx-background-color: rgb(105,192,255);
+    -fx-cursor: HAND;
+}
+.login-button {
+    -fx-background-color: #69c0ff;
+}
+
+.user-name:focus {
+    -fx-border-width: 1.5;
+    -fx-border-style: solid;
+    -fx-border-color: red;
+    -fx-outline: none;
+}
+
+.login-button:hover {
+    -fx-cursor: hand;
+}*/

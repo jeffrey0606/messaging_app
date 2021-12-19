@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.CreateChatGroup">
+   <children>
+      <StackPane layoutX="59.0" layoutY="96.0" prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="180.0" prefWidth="198.0">
+               <center>
+                  <ImageView fx:id="chat_space_image" fitHeight="179.0" fitWidth="200.0" pickOnBounds="true" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+            <FontAwesomeIcon fx:id="chat_space_icon" fill="#69c0ff" iconName="USERS" size="15em" text="" wrappingWidth="198.40007324218755">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </FontAwesomeIcon>
+            <FontAwesomeIcon iconName="CAMERA" size="3em" StackPane.alignment="BOTTOM_RIGHT">
+               <fill>
+                  <LinearGradient endX="0.4312977244835773" endY="0.977099226631281">
+                     <stops>
+                        <Stop color="WHITE" />
+                        <Stop color="WHITE" offset="0.007633587786259542" />
+                        <Stop color="#69c0ff" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <StackPane.margin>
+                  <Insets right="15.0" />
+               </StackPane.margin>
+            </FontAwesomeIcon>
+            <AnchorPane fx:id="change_chat_space_image" prefHeight="200.0" prefWidth="200.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </StackPane>
+      <JFXButton layoutX="359.0" layoutY="353.0" onAction="#close_dialog" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: tomato;" text="Cancel" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="create_chat_space_id" layoutX="484.0" layoutY="353.0" onAction="#create_chat_space_button" prefHeight="26.0" prefWidth="83.0" style="-fx-background-color: #69c0ff;" text="Create" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <TextField fx:id="chat_space_name" layoutX="316.0" layoutY="96.0" prefHeight="26.0" prefWidth="251.0" promptText="Chat Space Name" />
+      <TextArea fx:id="chat_space_purpose_textArea" layoutX="316.0" layoutY="148.0" prefHeight="75.0" prefWidth="251.0" promptText="Whats the purpose of the chat space" />
+      <Text layoutX="28.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CREATE A NEW CHAT SPACE" textAlignment="CENTER" wrappingWidth="542.1367492675781">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <JFXListView fx:id="add_users_list" layoutY="290.0" prefHeight="110.0" prefWidth="318.0" styleClass="mylistview" stylesheets="@../styles/scrollbar.css" />
+      <TextField fx:id="new_user_textfield" layoutX="318.0" layoutY="249.0" onKeyTyped="#on_add_user_textfield_change" prefHeight="26.0" prefWidth="185.0" promptText="enter a new user id" />
+      <JFXButton fx:id="add_new_user_id" alignment="CENTER" contentDisplay="RIGHT" disable="true" layoutX="506.0" layoutY="249.0" onAction="#add_new_user" prefHeight="26.0" prefWidth="61.0" style="-fx-background-color: rgbo(0, 194, 146, 1);" text="Add" textFill="WHITE">
+         <graphic>
+            <FontAwesomeIcon fill="WHITE" iconName="PLUS" />
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Text fx:id="no_user_yet" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NO USER ADDED YET" textAlignment="CENTER" wrappingWidth="318.4" />
+      <Text fx:id="error_text" fill="#f50505" layoutX="321.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="242.4000122070313">
+         <font>
+            <Font size="15.0" />
+         </font></Text>
+   </children>
+</AnchorPane>

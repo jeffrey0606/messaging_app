@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListCell?>
+
+
+<JFXListCell fx:id="cells" maxHeight="60.0" maxWidth="245.0" minHeight="60.0" minWidth="245.0" prefHeight="60.0" prefWidth="245.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" />
